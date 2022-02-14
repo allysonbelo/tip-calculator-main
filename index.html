@@ -9,35 +9,68 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="container">
 
-  Bill
+  <div class="logo">
+    <img src="images/logo.svg" alt="Logo" class="logo__img">
+  </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+  <main class="main">
 
-  Number of People
+    <section class="calc">
+      <form class="calc__bill">
+        <label for="bill">Bill</label>
+        <input id="bill" type="text" placeholder="0">
+      </form>
 
-  Tip Amount
-  / person
+      <form action="calc__tip">
+        <label>Select Tip %</label>
+        <span>5%</span>
+        <span>10%</span>
+        <span>15%</span>
+        <span>25%</span>
+        <span>50%</span>
+        <input type="text" placeholder="Custom">
+      </form>
 
-  Total
-  / person
+      <form class="calc__people">
+        <label for="people">Number of People</label>
+        <input type="text" placeholder="0">
+      </form>
 
-  Reset
+    </section>
+
+    <section class="result">
+      <div class="result__content">
+        <div class="tip">
+          <p class="tip__tex">Tip Amount</p>
+          <span class="tip__span">/ person</span>
+        </div>
+        <span class="value">$0.00</span>
+      </div>
+
+      <div class="result__content">
+        <div class="total">
+          <p class="tip__tex">Total</p>
+          <span class="tip__span">/ person</span>
+        </div>
+        <span class="value">$0.00</span>
+      </div>
+
+      <button class="result__btn">Reset</button>
+      
+    </section>
+
+  </main>
 
   <script src="js/script.js"></script>
 </body>
