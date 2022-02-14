@@ -1,0 +1,46 @@
+@use "sass:list";
+@use "sass:math";
+
+$Strong-cyan: hsl(172, 67%, 45%);
+$Very-dark-cyan: hsl(183, 100%, 15%);
+$Dark-grayish-cyan: hsl(186, 14%, 43%);
+$Dark-grayish-cyan: hsl(184, 14%, 56%);
+$Light-grayish-cyan: hsl(185, 41%, 84%);
+$Light-grayish-cyan: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+
+@mixin flx($property, $-cnt) {
+    display: flex;
+    #{$property}: $-cnt;
+}
+
+@mixin for-phone-only {
+    @media (max-width:767.98px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-only {
+    @media (min-width: 768px) and (max-width: 1199.98px) {
+        @content;
+    }
+}
+
+@mixin for-desktop-only {
+    @media (min-width: 1200px){
+        @content;
+    }
+}
+
+@mixin fontSize($size) {
+    font-size: calculaRem($size);
+}
+
+@function calculaRem($size){
+    @return math.div($size, 16px) * 1rem;
+}
+
+$space-mono: 'Space Mono', monospace;
+
+@import 'footer.scss'
+
