@@ -1,0 +1,44 @@
+form{
+    width: 100%;
+}
+
+label{
+    // font-family: $form-input;
+    font-weight: 700;
+    color: $Dark-grayish-cyan43;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+input{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: $Light-grayish-cyan97;
+    width: 100%;
+    height: 40px;
+    border-radius: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    text-align: right;
+    @include fontSize(24px);
+    font-weight: 700;
+    color: $Very-dark-cyan;
+    
+    &:focus{
+        outline: $Strong-cyan 1px solid;
+    }
+
+    &::placeholder{
+        color: $Dark-grayish-cyan56;
+    }
+
+}
+
+input .valor-gorgeta{
+    background-color: red;
+    height: 50px;
+    color: red;
+}

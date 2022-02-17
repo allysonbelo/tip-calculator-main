@@ -1,0 +1,76 @@
+.calc__bill {
+
+    .wrapper__bill {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: url(../images/icon-dollar.svg);
+            position: absolute;
+            padding-left: 15px;
+        }
+    }
+}
+
+.calc__tip {
+    // display: flex;
+
+    .tip__valor {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+
+        @include for-desktop-only {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .valor-gorgeta {
+            background-color: $Very-dark-cyan;
+            height: 45px;
+            border-radius: 5px;
+            color: $White;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include fontSize(24px);
+            cursor: pointer;
+
+            &:last-child {
+                background-color: $Light-grayish-cyan97;
+            }
+
+            input {
+                outline: none;
+                text-align: center;
+
+                &::placeholder {
+                    color: $Very-dark-cyan;
+                }
+            }
+
+        }
+
+        .active {
+            background-color: $Strong-cyan;
+            color: $Very-dark-cyan;
+        }
+    }
+}
+
+.calc__people {
+
+    .wrapper__people{
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &::before{
+            content: url(../images/icon-person.svg);
+            position: absolute;
+            padding-left: 15px;
+        }
+    }
+    
+}

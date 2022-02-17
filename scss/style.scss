@@ -3,11 +3,18 @@
 
 $Strong-cyan: hsl(172, 67%, 45%);
 $Very-dark-cyan: hsl(183, 100%, 15%);
-$Dark-grayish-cyan: hsl(186, 14%, 43%);
-$Dark-grayish-cyan: hsl(184, 14%, 56%);
-$Light-grayish-cyan: hsl(185, 41%, 84%);
-$Light-grayish-cyan: hsl(189, 41%, 97%);
+$Dark-grayish-cyan43: hsl(186, 14%, 43%);
+$Dark-grayish-cyan56: hsl(184, 14%, 56%);
+$Light-grayish-cyan84: hsl(185, 41%, 84%);
+$Light-grayish-cyan97: hsl(189, 41%, 97%);
 $White: hsl(0, 0%, 100%);
+
+$space-mono: 'Space Mono', monospace;
+$form-input: 24px;
+
+*{
+    font-family: $space-mono;
+}
 
 @mixin flx($property, $-cnt) {
     display: flex;
@@ -40,7 +47,42 @@ $White: hsl(0, 0%, 100%);
     @return math.div($size, 16px) * 1rem;
 }
 
-$space-mono: 'Space Mono', monospace;
 
-@import 'footer.scss'
+@import 'footer.scss', 'base.scss' , 'calc.scss', 'result.scss';
+
+.container{
+    background-color: $Light-grayish-cyan84;
+    min-height: 100vh;
+    @include flx(justify-content, center);
+    align-items: center;
+    flex-direction: column;
+    row-gap: 40px;
+    width: 100%;
+
+    .logo{
+        margin-top: 80px;
+
+        @include for-desktop-only(){
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.main{
+    background-color: $White;
+    border-radius: 20px;
+    padding: 40px;
+    display: grid;
+    grid-template-rows: 100% 100%;
+    font-family: $space-mono;
+    row-gap: 20px;
+
+    @include for-desktop-only(){
+        width: 60%;
+        column-gap: 60px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 

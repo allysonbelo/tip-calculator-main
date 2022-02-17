@@ -28,46 +28,54 @@
 
     <section class="calc">
       <form class="calc__bill">
-        <label for="bill">Bill</label>
-        <input id="bill" type="text" placeholder="0">
+        <label for="bill" class="bill">Bill</label>
+        <div class="wrapper__bill">
+          <input id="bill" class="text" type="text" placeholder="0">
+        </div>
       </form>
 
-      <form action="calc__tip">
-        <label>Select Tip %</label>
-        <span>5%</span>
-        <span>10%</span>
-        <span>15%</span>
-        <span>25%</span>
-        <span>50%</span>
-        <input type="text" placeholder="Custom">
+      <form class="calc__tip">
+        <label class="tip">Select Tip %</label>
+        <div class="tip__valor">
+          <span class="valor-gorgeta">5%</span>
+          <span class="valor-gorgeta">10%</span>
+          <span class="valor-gorgeta">15%</span>
+          <span class="valor-gorgeta">25%</span>
+          <span class="valor-gorgeta">50%</span>
+          <span class="valor-gorgeta custom">
+            <input type="text" placeholder="Custom">
+          </span>
+        </div>
       </form>
 
       <form class="calc__people">
-        <label for="people">Number of People</label>
-        <input type="text" placeholder="0">
+        <label for="people" class="people">Number of People</label>
+        <div class="wrapper__people">
+          <input type="text" class="people" placeholder="0">
+        </div>
       </form>
 
     </section>
 
     <section class="result">
-      <div class="result__content">
+      <div class="result__content--tip">
         <div class="tip">
           <p class="tip__tex">Tip Amount</p>
           <span class="tip__span">/ person</span>
         </div>
-        <span class="value">$0.00</span>
+        <input type="number" class="value" placeholder="$0.00" readonly>
       </div>
 
-      <div class="result__content">
+      <div class="result__content--total">
         <div class="total">
           <p class="tip__tex">Total</p>
           <span class="tip__span">/ person</span>
         </div>
-        <span class="value">$0.00</span>
+        <input type="number" class="value" placeholder="$0.00" readonly>
       </div>
 
       <button class="result__btn">Reset</button>
-      
+
     </section>
 
   </main>
