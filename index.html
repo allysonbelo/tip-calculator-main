@@ -42,16 +42,16 @@
           <span class="valor-gorgeta">15%</span>
           <span class="valor-gorgeta">25%</span>
           <span class="valor-gorgeta">50%</span>
-          <span class="valor-gorgeta custom">
-            <input type="text" placeholder="Custom">
-          </span>
+          <!-- <span class="valor-gorgeta custom">
+            <input type="text" placeholder="Custom" >
+          </span> -->
         </div>
       </form>
 
       <form class="calc__people">
         <label for="people" class="people">Number of People</label>
         <div class="wrapper__people">
-          <input type="text" class="people" placeholder="0">
+          <input type="text" class="people-input" placeholder="0">
         </div>
       </form>
 
@@ -63,7 +63,7 @@
           <p class="tip__tex">Tip Amount</p>
           <span class="tip__span">/ person</span>
         </div>
-        <input type="number" class="value" placeholder="$0.00" readonly>
+        <span id="tip-amount" class="value">0.00</span>
       </div>
 
       <div class="result__content--total">
@@ -71,10 +71,10 @@
           <p class="tip__tex">Total</p>
           <span class="tip__span">/ person</span>
         </div>
-        <input type="number" class="value" placeholder="$0.00" readonly>
+        <span id="total-person" class="value">0.00</span>
       </div>
 
-      <button class="result__btn">Reset</button>
+      <button class="result__btn" onclick="reset()">Reset</button>
 
     </section>
 

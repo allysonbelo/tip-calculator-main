@@ -84,15 +84,15 @@ input .valor-gorgeta {
   font-size: 1.5rem;
   cursor: pointer;
 }
-.calc__tip .tip__valor .valor-gorgeta:last-child {
-  background-color: #f4fafa;
-}
 .calc__tip .tip__valor .valor-gorgeta input {
   outline: none;
   text-align: center;
 }
 .calc__tip .tip__valor .valor-gorgeta input::placeholder {
   color: #00494d;
+}
+.calc__tip .tip__valor .active2 {
+  background-color: #26c0ab;
 }
 .calc__tip .tip__valor .active {
   background-color: #26c0ab;
@@ -134,18 +134,22 @@ input .valor-gorgeta {
 }
 .result__content--tip .value, .result__content--total .value {
   background-color: transparent;
-  width: 100%;
   max-width: 100px;
   color: #26c0ab;
   padding: 0;
   font-size: 1.875rem;
   outline: 0;
+  text-align: right;
 }
 @media (min-width: 1200px) {
   .result__content--tip .value, .result__content--total .value {
     font-size: 3.125rem;
-    max-width: 200px;
+    max-width: 100%;
   }
+}
+.result__content--tip .value::before, .result__content--total .value::before {
+  content: "$";
+  margin-right: 5px;
 }
 .result__content--tip .value::placeholder, .result__content--total .value::placeholder {
   color: #26c0ab;

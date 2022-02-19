@@ -37,9 +37,9 @@
             @include fontSize(24px);
             cursor: pointer;
 
-            &:last-child {
-                background-color: $Light-grayish-cyan97;
-            }
+            // &:last-child {
+            //     background-color: $Light-grayish-cyan97;
+            // }
 
             input {
                 outline: none;
@@ -50,6 +50,11 @@
                 }
             }
 
+            
+        }
+
+        .active2{
+            background-color: $Strong-cyan;
         }
 
         .active {
@@ -74,3 +79,4 @@
     }
     
 }
+

@@ -22,16 +22,21 @@
 
         .value {
             background-color: transparent;
-            width: 100%;
             max-width: 100px;
             color: $Strong-cyan;
             padding: 0;
             @include fontSize(30px);
             outline: 0;
+            text-align: right;
 
             @include for-desktop-only{
                 @include fontSize(50px);
-                max-width: 200px;
+                max-width: 100%;
+            }
+
+            &::before{
+                content: '$';
+                margin-right: 5px;
             }
 
             &::placeholder {
