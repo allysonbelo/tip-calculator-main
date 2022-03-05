@@ -20,15 +20,19 @@
 
 <body class="container">
 
-  <div class="logo">
-    <img src="images/logo.svg" alt="Logo" class="logo__img">
+  <div role="logo" class="logo">
+    <h1>
+      <img src="images/logo.svg" alt="Logo" class="logo__img">
+    </h1>
   </div>
 
   <main class="main">
 
     <section class="calc">
       <form class="calc__bill">
-        <label for="bill" class="bill">Bill</label>
+        <h2>
+          <label for="bill" class="bill">Bill</label>
+        </h2>
         <div class="wrapper__bill">
           <input id="bill" class="text" type="text" placeholder="0">
         </div>
@@ -51,7 +55,7 @@
       <form class="calc__people">
         <label for="people" class="people">Number of People</label>
         <div class="wrapper__people">
-          <input type="text" class="people-input" placeholder="0">
+          <input id="people" type="text" class="people-input" placeholder="0">
         </div>
       </form>
 
